@@ -1,17 +1,17 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-// import Component1 from "./lec2412/component1";
-import HtmlComponent from "./lec2412/htmlcomp";
-import MyCustComp from "./lec3112/propexmp3";
+// import MyCustButton from "./lec3112/purefunc2";
+import HookExmp1 from "./lec3112/hookexmp1";
 
-// 1. Class based implementation
-// 2. Functional implementation
-// JSX JavaScript XML
-// <DIV> <div>
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    {/* <Component1 /> */}
-    {/* <HtmlComponent /> */}
-    <MyCustComp />
+    {/* <MyCustButton />
+    <br />
+    <MyCustButton var1={true} />
+    <br />
+    <MyCustButton var2={"6CEB"} />
+    <br />
+    <MyCustButton var1={true} var2={"BTech"} /> */}
+    <HookExmp1 />
   </StrictMode>
 );
