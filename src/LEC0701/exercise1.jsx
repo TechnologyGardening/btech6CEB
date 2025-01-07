@@ -13,6 +13,13 @@ function ClassExercise() {
   const validEmail = new RegExp(
     "^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$"
   );
+
+  // exercise 3
+  const [btntxt, setBtntxt] = useState("Show Text");
+  const [btnbool, setBtnbool] = useState(false);
+  const [paradisp, setParadisp] = useState("none");
+
+  //exercise 4
   const [charrcount, setCharrcount] = useState(0);
   return (
     <div>
@@ -58,6 +65,19 @@ function ClassExercise() {
       {validemail}
       <br />
       {charrcount}
+      <br />
+      <button
+        onClick={() => {
+          setBtnbool(!btnbool);
+          btnbool
+            ? (setParadisp("none"), setBtntxt("Show Text"))
+            : (setParadisp(""), setBtntxt("Hide Text"));
+        }}
+      >
+        {btntxt}
+      </button>
+      <br />
+      <p style={{ display: paradisp }}>This is a sample text</p>
     </div>
   );
 }
